@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+        <style>
+            img{ height: 150px}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: hotpink;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+            
+ *{
+  box-sizing: border-box;
+}
+
+$border: 1px solid #4d4d4d;
+$header-font: 'Poppins', sans-serif; 
+
+img{
+  width: 100%;
+  border-radius: 5px;
+  @media screen and (max-width: 599px){
+    height: 250px;
+    object-fit: cover;
+  }
+}
+body{
+  background: #2b2a2b;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  padding: 2rem;
+  max-width: 1400px;
+  margin: auto;
+
+}
+
+h1{
+  font-family:  $header-font;
+}
+h2{
+  color: #ed666f;
+  font-family: $header-font;
+  font-weight: 500;
+}
+
+h3{
+  font-family: $header-font;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.grid-wrapper{
+
+  // Adding grid layout for screen size above 600 
+  @media screen and (min-width: 600px){
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+   
+  }
+
+  @media screen and (min-width: 1025px){
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+  }
+  @media screen and (min-width: 600px) and (max-width: 1024px){
+    grid-template-columns: 1fr 2fr;
+  }
+
+}
+
+article{
+  p{
+    font-family: 'Karla', sans-serif;
+    font-size: 0.95rem;
+    color: #c8c8c8;
+  }
+  padding-bottom: 1rem;
+  border-bottom: $border;
+
+
+  // using Grid area to place the 4th and 8th element. 
+
+  &:nth-child(4){
+    grid-area: 1/2/4/3;   
+  }
+
+  &:nth-child(8){
+    @media screen and (min-width: 1025px){
+      grid-area: 1/4/4/-1;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1024px){
+      grid-area: 4/2/8/3;
+    }
+  }
+
+  &:nth-child(4n+3){
+    @media screen and (min-width: 1025px){
+      border-bottom: 0;
+    }   
+  }
+  &:nth-child(4){
+    @media screen and (min-width: 1025px){
+      border-right: $border;
+      padding-right: 1rem;
+    }
+
+  }
+  &:nth-child(4n){
+    @media screen and (min-width: 600px){
+      border-left: $border;
+      border-bottom: 0;
+      padding-left: 1rem;
+    }
+  }
+
+
+}
+
+.footer-note{
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.9rem;
+  background: white;
+  padding: 1rem;
+  color: black;
+  border-radius: 5px;
+  a{
+    color: inherit;
+    font-weight: 600;
+  }
+}          
+</style>
+      <link rel="stylesheet" href="stylesheet.css">
+</head>    
+        
+     
+    
+    <body>
+     <header background-image= a href= "images/Interior%20Chinatown.png">
+        
+        
+        <h1>Interior Chinatown</h1>
+    
+  <div class="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="About.html">About Charles Yu</a>
+<a href="contributors.html">Contributors</a>     
+  <a href="criticalessays.html">Critical Essays</a>
+      
+  <div class="dropdown">
+        <button class="dropbtn">Asians in America 
+          <i class="fa fa-caret-down"></i>
+ 
+      </button>
+          
+
+<div class="dropdown-content">
+      <a href="asiansinamerica.html">1840s-1920s</a>
+      <a href="asiansinamericaone.html">1930s-1980s</a>
+     <a href="asiansinamericatwo.html">1980s- Present Day</a>
+    </div>
+     </div>
+   
+        
+         <div class="dropdown">
+        <button class="dropbtn">Asians in Hollywood
+          <i class="fa fa-caret-down"></i>
+ 
+      </button>
+          
+<div class="dropdown-content">
+      <a href="asiansinhollywood.html">Timeline and Milestones</a>
+      <a href="keymovies.html">Key Films</a>
+     
+    </div>
+     </div>
+        </div>
+          </header>
+
+
+
+<div id="introp" style="padding: 40px">
+    
+    
+    <b style="text font-size: 80px">“We’ve been here two hundred years. The first Chinese
+        came in 1815. Germans and Dutch and Irish and Italians who came at the turn of the twentieth century. They’re Americans. Why doesn’t this face register as American?” (Charles Yu, <i>Interior Chinatown</i>) </b></div>
+
+
+        <h2> Asian American Historical Timeline</h2>
+
+
+        <h3>1840-1920s</h3>
+        
+      <section>
+        
+        <div class="grid-wrapper">
+            
+            <article>
+
+    <div class="title">1843</div>
+    <div class="body">
+      <p>A 14 year old fisherman named Manjiro becomes the first U.S Japanese immigrant.</p>
+        <img src="images/Manjiro%20First%20Japanese%20Immigrant.JPG" alt="Manjiro First Japanese Immigrant" height="30px">
+    </div>
+            </article>
+            
+  
+      <article>
+    <div class="title">1850</div>
+    <div class="body">
+      <p>California imposes the Foreign Miners Tax. It is enforced mostly against Chinese miners, who were often forced to pay more.</p>
+          </div></article>
+  <article>
+  
+    <div class="title big">1854</div>
+    <div class="body">
+      <p>People v. Hall determined that Chinese people cannot defend against white defendants.</p>
+    </div>
+      
+  
+            </article>
+            
+            <article>
+ 
+    <div class="title">1875</div>
+    <div class="body">
+      <p>The Page Act was enacted on March 3, 1875.
+○	What is The Page Act?
+            ■	The Page Act prohibited the recruitment of laborers from “China, Japan, or any Oriental Country” who were coerced or women brought for immoral purposes.<a target="_blank" href="https://immigrationhistory.org/item/page-act/"> Click here for more information.</a> </p>
+    </div>
+    </article>
+            
+            <article>
+  
+    <div class="title">May 6 1882-</div>
+    <div class="body">
+      <p>Chinese immigrants are targeted by congress with the passing of the Chinese Exclusion Act, signed into law by President Chester Arthur.
+○	What is The Chinese Exclusion Act?
+            ■	The Chinese Exclusion prohibited the immigration of Chinese laborers for 10 years. The law excluded merchants, teachers, students, and diplomats. When the Exclusion Act expired in 1892, Congress added an extension through the Geary Act. The extension was made permanent in 1902 and required each Chinese resident to register and obtain a certificate of residence.<a target="_blank" href="https://www.archives.gov/milestone-documents/chinese-exclusion-act"> Click here for more information. </a></p>
+        
+      
+                </div></article>
+  
+                <article>
+                    
+  
+    <div class="title big">May 27-28, 1887-</div>
+    <div class="body">
+      <p> Rock Springs Massacre: 
+○	What is the Rock Springs Massacre?
+■	Seven white horse thieves ambush a group of Chinese miners who set up camp along the Snake River in Oregon. The thieves murdered all 34 men and mutilated their bodies before dumping them in the river. Three members of the gang stood on trial and were found not guilty by an all-white jury. 
+<img src="images/rock%20springs%20massacre.JPG" alt="Rock springs massacre">
+      </p>
+    </div>
+                </article>
+                <article>
+  
+    <div class="title">1896</div>
+    <div class="body">
+      <p>Bubonic Plague Scare in Honolulu: Chinatown Burned
+○	What is the Bubonic Plague Scare?
+■	After a shopkeeper in Honolulu’s Chinatown is diagnosed with the Bubonic Plague, the Territory of Hawaii’s Board of Health declares a state of emergency as more cases are identified. As a result, city officials decided to set fire to infected homes and businesses. The flames eventually grew out of control and left 38 acres of Chinatown burned.</p>
+    </div> </article>
+                <article>
+       
+    <div class="title">March 28, 1898-</div>
+    <div class="body">
+      <p> Wong Kim Ark v. U.S. decides that Chinese born in the U.S. cannot be stripped of their citizenship.
+○	What is Wong Kim Ark v. U.S.?
+■	One of the most far-reaching cases in immigration law, the Supreme Court ruled for the first time that 14th Amendment to the Constitution applied to all people born in the United States "regardless of race or color." Thus, Wong Kim Ark, who was born in the U.S., was considered a citizen by birth and could not be prevented from returning to live in America after a trip to China.</p>
+    </div></article>
+                <article>
+ 
+    <div class="title">1904-</div>
+    <div class="body">
+      <p> Chinese Exclusion Act made indefinite.</p>
+                    </div></article>
+
+ <article>
+    <div class="title">1907-</div>
+    <div class="body">
+      <p>President Theodore Roosevelt signs Executive Order 589 prohibiting Japanese with passports for Hawaii, Mexico, or Canada to emigrate to the U.S.</p>
+     </div>     </article>
+            
+                <article>
+        
+    <div class="title">1910</div>
+    <div class="body">
+      <p>Angel Island opens in San Francisco Bay, serving as the country’s major point of entry for Asian immigrants.</p>
+    </div>
+ 
+        
+                </article>
+                <article>
+        
+    <div class="title">February 5 1917</div>
+    <div class="body">
+      <p> Congress passes the Immigration Act of 1917.
+        ○	What is the Immigration Act of 1917?
+■	Also known as the Asiatic Barred Zone, this act was intended to prevent “undesirables” from immigrating to the US. The act primarily targeted individuals migrating from Asia. </p>
+    </div>
+  
+                </article>
+                <article>
+        
+    <div class="title">1922</div>
+    <div class="body">
+      <p>Takao Ozawa v. U.S. declares Japanese ineligible for naturalized citizenship.</p>
+    </div></article>
+    
+    <article>
+       
+    <div class="title">1928</div>
+    <div class="body">
+      <p>Filipino farm workers are driven out of Yakima Valley, Washington.</p>
+                    </div></article>
+  
+          </div>
+        </section>
+<br>
+        <br>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2023 Interior Chinatown Casebook</p>
+        </div>
+        <div class="footer-right">
+            <p>Contact: info@example.com</p>
+            <p>Address:1184 W Main St, Decatur, IL 62522
+            <br>Millikin University</p>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>
